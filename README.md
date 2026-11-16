@@ -1,13 +1,8 @@
-README-CASTfxn
+CASTfxn
 ================
-
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
-    #> Last Update: 2026-11-16
 
 <img src="man/figures/hex_CAST.png" align="left" height="139" />
 
-## CASTfxn
 
 Suite of functions for the Causal Assessment Screening Tool (CASTool).
 
