@@ -42,7 +42,7 @@ GitHub.
 
 ``` r
 if(!require(remotes)){install.packages("remotes")}  #install if needed
-install_github("laura-naslund/CASTfxn", force=TRUE, build_vignettes = TRUE)
+install_github("USEPA/CASTfxn", force=TRUE, build_vignettes = TRUE)
 ```
 
 If using R v3.6 then need an extra line to allow devtools to work
@@ -87,11 +87,6 @@ By those using the CAST and familiar with causal assessment.
 The code is intended to be run from the Shiny application but can also
 be run in the R console.
 
-## Shiny Apps
-
-As of 2025-09-04 the Shiny applications were moved to their own
-repository; <https://github.com/leppott/CAST_Shiny>
-
 ## Documentation
 
 Vignette and install guide are planned for the future.
@@ -111,3 +106,6 @@ To see all available functions in the package use the command below.
 # library(CASTfxn) # the library must be loaded before accessing help
 help(package="CASTfxn")
 ```
+
+## Disclaimer
+This United States Environmental Protection Agency GitHub project code is provided on an "as is" basis and the user assumes responsibility for its use. EPA has relinquished control of the information and no longer has responsibility to protect the integrity, confidentiality, or availability of the information. Any reference to specific commercial products, processes, or services by service mark, trademark, manufacturer, or otherwise, does not constitute or imply their endorsement, recommendation or favoring by EPA. The EPA seal and logo shall not be used in any manner to imply endorsement of any commercial product or activity by EPA or the United States Government.
