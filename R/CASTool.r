@@ -29,7 +29,7 @@
 #'
 #' @return no returns, writes the report and supplemental files to the out directory
 #' @export
-runCASTfxn <- function(boo_shiny, boo_debug, in_dir, out_dir, region, dn_checked_sk){
+runCASTfxn <- function(boo_shiny, boo_debug, in_dir, out_dir, region, dn_checked_sk, shiny_targ = input$si_checked_sites_targ){
 
 tic <- Sys.time()
 
@@ -228,7 +228,7 @@ prog_cnt <- stepProgress(cfg, "Select target site", prog_cnt, prog_n, prog_sleep
 df_targets <- readRDS(file.path(cfg$out_dir, cfg$dn_checked_sk, "df_targets.rds"))
 
 if (cfg$boo_shiny == TRUE) {
-  df_targets <- data.frame("TargetSiteID" = input$si_checked_sites_targ,
+  df_targets <- data.frame("TargetSiteID" = shiny_targ,
                            "Chosen by" = NA,
                            "Comment" = NA)
   names(df_targets)[2] <- "Chosen by"
