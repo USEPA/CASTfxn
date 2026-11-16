@@ -19,6 +19,16 @@
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+#' Run the CASTool skeleton code
+#'
+#' @param boo_shiny boolean to run in Shiny mode
+#' @param boo_debug boolean to run in debug mode
+#' @param in_dir directory containing data
+#' @param out_dir directory to write results
+#' @param region name of the analysis region
+#'
+#' @return no returns, writes the report and supplemental files to the out directory
+#' @export
 runCASTfxn <- function(boo_shiny, boo_debug, in_dir, out_dir, region){
 
 tic <- Sys.time()
