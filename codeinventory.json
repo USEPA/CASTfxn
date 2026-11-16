@@ -1,7 +1,7 @@
 {
-  "name": "Open Source Projects",
+  "name": "CASTfxn",
   "organization": "U.S. Environmental Protection Agency",
-  "description": "Contains files for teams to reuse when working in and with EPA Open Source projects.",
+  "description": "Contains files for running the CASTool: a screening tool to identify causes of biological impairment in streams.",
   "permissions": {
     "licenses": [
       {
@@ -16,9 +16,9 @@
     "opensource"
   ],
   "contact": {
-    "email": "griffin.connor@epa.gov",
-    "name": "Connor Griffin"
+    "email": "Naslund.Laura@epa.gov",
+    "name": "Laura Naslund"
   },
-  "repositoryURL": "https://github.com/USEPA/open-source-projects",
+  "repositoryURL": "https://github.com/USEPA/CASTfxn",
   "vcs": "git"
 }
