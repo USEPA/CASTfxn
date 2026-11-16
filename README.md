@@ -3,10 +3,9 @@ README-CASTfxn
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-    #> Last Update: 2025-09-19 14:46:10.330949
+    #> Last Update: 2026-11-16
 
 <img src="man/figures/hex_CAST.png" align="left" height="139" />
-<img src="man/figures/hex_RPP.png" align="center" height="139" />
 
 ## CASTfxn
 
