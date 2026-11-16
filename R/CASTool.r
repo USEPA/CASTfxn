@@ -19,13 +19,15 @@
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+runCASTfxn <- function(boo_shiny, boo_debug, in_dir, out_dir, region){
+
 tic <- Sys.time()
 
 # 01, Set up ####
 ## Define global variables ####
 cfg <- setGlobals(
-  boo_shiny = TRUE, # Whether to run the code in Shiny mode (set to FALSE if running script outside of the app)
-  boo_debug = FALSE # Whether to run the code in debug mode
+  boo_shiny = boo_shiny, # Whether to run the code in Shiny mode (set to FALSE if running script outside of the app)
+  boo_debug = boo_debug # Whether to run the code in debug mode
 )
 
 ## R console program set up ####
@@ -33,14 +35,11 @@ if(cfg$boo_shiny == FALSE) {
 
   cfg <- setUpRConsole(
       # File path of data directory
-      #in_dir = "C:/Users/lnaslund/OneDrive - Environmental Protection Agency (EPA)/Profile/Documents/3-projects/10-castool/8-nars-test-data/Data",
-      in_dir = "C:/Users/lnaslund/OneDrive - Environmental Protection Agency (EPA)/Profile/Documents/3-projects/10-castool/6-state-test-data/WA_CASTool_TestData_20260407",
+      in_dir = in_dir,
       # File path of results directory
-      #out_dir = "C:/Users/lnaslund/OneDrive - Environmental Protection Agency (EPA)/Profile/Documents/3-projects/10-castool/8-nars-test-data/Results",
-      out_dir = "C:/Users/lnaslund/WA_Results",
+      out_dir = out_dir,
       # Region name
-      #region = "Rhode Island"
-      region = "Washington"
+      region = region
     ) |>
     append(cfg, values = _)
 
@@ -932,4 +931,6 @@ message(msg)
 
 # 24, Clean Up ####
 prog_cnt <- stepProgress(cfg, "Clean Up", prog_cnt, prog_n, prog_sleep)
+
+}
 #XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
