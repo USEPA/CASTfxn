@@ -29,7 +29,7 @@
 #'
 #' @return no returns, writes the report and supplemental files to the out directory
 #' @export
-runCASTfxn <- function(boo_shiny, boo_debug, in_dir, out_dir, region){
+runCASTfxn <- function(boo_shiny, boo_debug, in_dir, out_dir, region, dn_checked_sk){
 
 tic <- Sys.time()
 
@@ -59,13 +59,18 @@ if(cfg$boo_shiny == FALSE) {
 ## Shiny set up ####
 if (cfg$boo_shiny == TRUE) {
 
-  dir_rmd     <- file.path(system.file(package = "CASTfxn"), "rmd")
-  wd          <- getwd()
-  dir_data    <- dn_data
-  dir_results <- dn_results
+  # dir_rmd     <- file.path(system.file(package = "CASTfxn"), "rmd")
+  # wd          <- getwd()
+  # dir_data    <- dn_data
+  # dir_results <- dn_results
+  #
+  # cfg <- setUpShiny(dir_data = dir_data,
+  #                   dir_results = dir_results,
+  #                   dn_checked_sk = dn_checked_sk) |>
+  #   append(cfg, values = _)
 
-  cfg <- setUpShiny(dir_data = dir_data,
-                    dir_results = dir_results,
+  cfg <- setUpShiny(dir_data = in_dir,
+                    dir_results = out_dir,
                     dn_checked_sk = dn_checked_sk) |>
     append(cfg, values = _)
 
